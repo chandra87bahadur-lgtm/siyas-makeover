@@ -265,268 +265,333 @@
       *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
       .reveal{opacity:1;transform:none}
     }
+      .whatsapp-float {
+          position: fixed;
+          right: 22px;
+          bottom: 22px;
+          z-index: 9999;
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 13px 19px;
+          border-radius: 50px;
+          background: #25D366;
+          color: #fff;
+          font: 600 15px/1.4 Arial, sans-serif;
+          text-decoration: none;
+          box-shadow: 0 6px 22px rgba(0, 0, 0, .2);
+          transition: transform .2s ease, background .2s ease;
+      }
+
+          .whatsapp-float:hover {
+              background: #1DA851;
+              color: #fff;
+              transform: translateY(-3px);
+          }
+
+          .whatsapp-float:focus-visible {
+              outline: 3px solid #111;
+              outline-offset: 4px;
+          }
+
+          .whatsapp-float svg {
+              width: 25px;
+              height: 25px;
+              flex-shrink: 0;
+          }
+
+      @media (max-width: 480px) {
+          .whatsapp-float {
+              right: 15px;
+              bottom: 15px;
+              padding: 13px;
+          }
+
+              .whatsapp-float span {
+                  display: none;
+              }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+          .whatsapp-float {
+              transition: none;
+          }
+      }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" id="siteHeader">
-    <nav class="nav-inner" aria-label="Main navigation">
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primaryNav"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
-      <div class="nav-links" id="primaryNav">
-        <a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#team">Academy</a><a href="#about">About</a>
-      </div>
-      <a class="wordmark" href="#home" aria-label="Siya’s Makeover home">SIYA’S MAKEOVER</a>
-      <div class="nav-right"><a class="nav-book" href="#booking">Book Now</a></div>
-    </nav>
-  </header>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="siteHeader">
+        <nav class="nav-inner" aria-label="Main navigation">
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primaryNav"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+            <div class="nav-links" id="primaryNav">
+                <a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#team">Academy</a><a href="#about">About</a>
+            </div>
+            <a class="wordmark" href="#home" aria-label="Siya’s Makeover home">SIYA’S MAKEOVER</a>
+            <div class="nav-right"><a class="nav-book" href="#booking">Book Now</a></div>
+        </nav>
+    </header>
 
-  <main id="main">
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <img class="hero-image" src="images/siya.jpg" alt="Editorial beauty portrait with softly styled hair" fetchpriority="high">
-      <div class="hero-content">
-        <p class="eyebrow">Beauty Parlour &amp; Academy</p>
-        <h1 id="hero-title">Your Beauty.<br>Your Style.<br>Your <em>Moment.</em></h1>
-        <p class="hero-copy">Bridal makeup. Beautiful hair. Skin and nail care — all in one place.</p>
-        <div class="hero-actions"><a class="btn" href="#booking">Book Your Appointment <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a class="btn btn-outline" href="#portfolio">View Our Work</a></div>
-      </div>
-      <span class="hero-note" aria-hidden="true">AYODHYA NAGAR · BHOPAL</span>
-    </section>
+    <main id="main">
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <img class="hero-image" src="images/siya.jpg" alt="Editorial beauty portrait with softly styled hair" fetchpriority="high">
+            <div class="hero-content">
+                <p class="eyebrow">Beauty Parlour &amp; Academy</p>
+                <h1 id="hero-title">Your Beauty.<br>Your Style.<br>Your <em>Moment.</em></h1>
+                <p class="hero-copy">Bridal makeup. Beautiful hair. Skin and nail care — all in one place.</p>
+                <div class="hero-actions"><a class="btn" href="#booking">Book Your Appointment <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a class="btn btn-outline" href="#portfolio">View Our Work</a></div>
+            </div>
+            <span class="hero-note" aria-hidden="true">AYODHYA NAGAR · BHOPAL</span>
+        </section>
 
-    <div class="marquee" aria-label="Our services">
-      <div class="marquee-track" aria-hidden="true">
-        <div class="marquee-group"><span>BRIDAL MAKEUP <i>·</i> PARTY MAKEUP <i>·</i> HAIR STYLING <i>·</i> SKIN CARE <i>·</i> FACIALS <i>·</i> NAIL CARE <i>·</i> WAXING <i>·</i> THREADING <i>·</i></span></div>
-        <div class="marquee-group"><span>BRIDAL MAKEUP <i>·</i> PARTY MAKEUP <i>·</i> HAIR STYLING <i>·</i> SKIN CARE <i>·</i> FACIALS <i>·</i> NAIL CARE <i>·</i> WAXING <i>·</i> THREADING <i>·</i></span></div>
-      </div>
-    </div>
-
-    <section class="section" id="services">
-      <div class="container">
-        <div class="services-head reveal">
-          <div class="intro"><p class="eyebrow">Our Services</p><h2>Beauty Services<br>Made for You</h2><p>From special-occasion makeup to everyday beauty care, discover services tailored to your style and occasion.</p></div>
-          <a class="text-link" href="#booking">Explore our services <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <div class="marquee" aria-label="Our services">
+            <div class="marquee-track" aria-hidden="true">
+                <div class="marquee-group"><span>BRIDAL MAKEUP <i>·</i> PARTY MAKEUP <i>·</i> HAIR STYLING <i>·</i> SKIN CARE <i>·</i> FACIALS <i>·</i> NAIL CARE <i>·</i> WAXING <i>·</i> THREADING <i>·</i></span></div>
+                <div class="marquee-group"><span>BRIDAL MAKEUP <i>·</i> PARTY MAKEUP <i>·</i> HAIR STYLING <i>·</i> SKIN CARE <i>·</i> FACIALS <i>·</i> NAIL CARE <i>·</i> WAXING <i>·</i> THREADING <i>·</i></span></div>
+            </div>
         </div>
-        <div class="services-grid">
-          <article class="service-card reveal"><div class="service-image-wrap"><img class="service-image" src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=900&q=85" alt="Stylist creating a polished salon haircut" loading="lazy"></div><div class="service-content"><h3>Makeup</h3><p>Bridal makeup, party makeup, and event-ready looks designed to complement your features and personal style.</p><div class="price">Ask for a quote</div><a class="text-link" href="#booking" data-service="Makeup">Book Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></article>
-          <article class="service-card reveal"><div class="service-image-wrap"><img class="service-image" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=85" alt="Professional hair colour service in a salon" loading="lazy"></div><div class="service-content"><h3>Hair Services</h3><p>Trendy haircuts, professional styling, keratin treatments, and hair spas for a polished look and healthy-feeling hair.</p><div class="price">Ask for a quote</div><a class="text-link" href="#booking" data-service="Hair Services">Book Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></article>
-          <article class="service-card reveal"><div class="service-image-wrap"><img class="service-image" src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=900&q=85" alt="Healthy, glossy hair after a salon treatment" loading="lazy"></div><div class="service-content"><h3>Skin Care</h3><p>Refresh your routine with facial and skin-care services designed to leave you feeling relaxed and cared for.</p><div class="price">Ask for a quote</div><a class="text-link" href="#booking" data-service="Skin Care">Book Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></article>
-          <article class="service-card reveal"><div class="service-image-wrap"><img class="service-image" src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=900&q=85" alt="Elegant bridal hairstyle with softly pinned details" loading="lazy"></div><div class="service-content"><h3>Nails &amp; Beauty</h3><p>Manicures, pedicures, waxing, and threading to complete your self-care and special-occasion beauty routine.</p><div class="price">Ask for a quote</div><a class="text-link" href="#booking" data-service="Nails & Beauty">Book Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></article>
+
+        <section class="section" id="services">
+            <div class="container">
+                <div class="services-head reveal">
+                    <div class="intro"><p class="eyebrow">Our Services</p><h2>Beauty Services<br>Made for You</h2><p>From special-occasion makeup to everyday beauty care, discover services tailored to your style and occasion.</p></div>
+                    <a class="text-link" href="#booking">Explore our services <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card reveal"><div class="service-image-wrap"><img class="service-image" src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=900&q=85" alt="Stylist creating a polished salon haircut" loading="lazy"></div><div class="service-content"><h3>Makeup</h3><p>Bridal makeup, party makeup, and event-ready looks designed to complement your features and personal style.</p><div class="price">Ask for a quote</div><a class="text-link" href="#booking" data-service="Makeup">Book Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></article>
+                    <article class="service-card reveal"><div class="service-image-wrap"><img class="service-image" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=85" alt="Professional hair colour service in a salon" loading="lazy"></div><div class="service-content"><h3>Hair Services</h3><p>Trendy haircuts, professional styling, keratin treatments, and hair spas for a polished look and healthy-feeling hair.</p><div class="price">Ask for a quote</div><a class="text-link" href="#booking" data-service="Hair Services">Book Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></article>
+                    <article class="service-card reveal"><div class="service-image-wrap"><img class="service-image" src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=900&q=85" alt="Healthy, glossy hair after a salon treatment" loading="lazy"></div><div class="service-content"><h3>Skin Care</h3><p>Refresh your routine with facial and skin-care services designed to leave you feeling relaxed and cared for.</p><div class="price">Ask for a quote</div><a class="text-link" href="#booking" data-service="Skin Care">Book Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></article>
+                    <article class="service-card reveal"><div class="service-image-wrap"><img class="service-image" src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=900&q=85" alt="Elegant bridal hairstyle with softly pinned details" loading="lazy"></div><div class="service-content"><h3>Nails &amp; Beauty</h3><p>Manicures, pedicures, waxing, and threading to complete your self-care and special-occasion beauty routine.</p><div class="price">Ask for a quote</div><a class="text-link" href="#booking" data-service="Nails & Beauty">Book Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section transformation" id="transformation">
+            <div class="container">
+                <div class="center-heading reveal"><p class="eyebrow">A Little Beauty, A Lot of Confidence</p><h2>The Makeover Moment</h2><p>Explore a beauty transformation and imagine the look you would love for your next special occasion.</p></div>
+                <div class="comparison-layout reveal">
+                    <div class="comparison" id="comparison" style="--split:50%" role="group" aria-label="Before and after hair colour comparison">
+                        <img src="https://images.unsplash.com/photo-1512316609839-ce289d3eba0a?auto=format&fit=crop&w=1400&q=85" alt="Before: natural hair before a makeover" loading="lazy">
+                        <img class="after-image" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=85" alt="After: styled hair for a beauty makeover" loading="lazy">
+                        <span class="comparison-label before">Before</span><span class="comparison-label after">After</span>
+                        <div class="comparison-line" aria-hidden="true"></div><div class="comparison-handle" aria-hidden="true"><i class="fa-solid fa-left-right"></i></div>
+                        <input class="comparison-range" id="comparisonRange" type="range" min="5" max="95" value="50" aria-label="Reveal more of the after image" aria-valuetext="50 percent after image visible">
+                    </div>
+                    <div class="comparison-caption"><p class="eyebrow">Your Look, Your Way</p><h3>Feel ready for your moment.</h3><p>From bridal and party makeup to professional hair styling, our team helps you plan a look that suits your occasion.</p><p><strong class="serif" style="color:var(--foreground)">Bridal &amp; event beauty</strong><br>Contact us to discuss your preferred look and service requirements.</p><a class="text-link" href="#booking" data-service="Bridal Makeup">Enquire About a Makeover <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <div class="container portfolio-label reveal"><p class="eyebrow">Beauty Portfolio</p><h2>Looks for Every Occasion.</h2></div>
+            <div class="portfolio-track" aria-label="Hair styling portfolio gallery">
+                <div class="portfolio-strip">
+                    <div class="portfolio-item"><img src="images/1.jpg" alt="Soft, dimensional blonde styling" loading="lazy"></div>
+                    <div class="portfolio-item"><img src="images/2.jpg" alt="Glossy brunette editorial look" loading="lazy"></div>
+                    <div class="portfolio-item"><img src="images/3.jpg" alt="Natural waves and luminous finish" loading="lazy"></div>
+                    <div class="portfolio-item"><img src="images/4.jpg" alt="Fashion-led salon styling inspiration" loading="lazy"></div>
+                    <div class="portfolio-item"><img src="images/5.jpg" alt="Rich brunette hair with soft dimension" loading="lazy"></div>
+                    <div class="portfolio-item"><img src="images/6.jpg" alt="Modern editorial beauty look" loading="lazy"></div>
+                    <div class="portfolio-item"><img src="images/7.jpg" alt="Warm auburn-inspired styling" loading="lazy"></div>
+                    <div class="portfolio-item"><img src="images/8.jpg" alt="Soft blonde hair and natural movement" loading="lazy"></div>
+                </div>
+                <div class="portfolio-strip" aria-hidden="true">
+                    <!--<div class="portfolio-item"><img src="images/9.jpg" alt="" loading="lazy"></div>-->
+                    <div class="portfolio-item"><img src="images/10.jpg" alt="" loading="lazy"></div>
+                    <div class="portfolio-item"><img src="images/11.jpg" alt="" loading="lazy"></div>
+                    <div class="portfolio-item"><img src="images/12.jpg" alt="" loading="lazy"></div>
+                    <div class="portfolio-item"><img src="images/13.jpg" alt="" loading="lazy"></div>
+                    <div class="portfolio-item"><img src="images/14.jpg" alt="" loading="lazy"></div>
+                    <div class="portfolio-item"><img src="images/15.jpg" alt="" loading="lazy"></div>
+                    <div class="portfolio-item"><img src="images/16.jpg" alt="" loading="lazy"></div>
+                    <div class="portfolio-item"><img src="images/17.jpg" alt="" loading="lazy"></div>
+                </div>
+            </div>
+            <p class="portfolio-caption">Beauty looks and inspiration for your next special occasion</p>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container about-grid">
+                <div class="about-copy reveal"><p class="eyebrow">About Siya’s Makeover</p><h2>Your Beauty &amp; Learning Destination</h2><p>Siya’s Makeover is a beauty parlour and academy in Ayodhya Nagar, Bhopal, offering services for bridal occasions, parties, hair styling, skin care, and nail care.</p><p>Whether you are preparing for a special event or looking to enjoy a little self-care, get in touch to discuss the service that suits your needs. The academy side of the business also makes Siya’s Makeover a destination for beauty-focused learning.</p><blockquote class="pullquote">“Every look should feel personal, every detail thoughtfully considered.”</blockquote><div class="stats"><div class="stat"><strong>4.8/5</strong><span>Listed Rating</span></div><div class="stat"><strong>Beauty</strong><span>Parlour</span></div><div class="stat"><strong>Academy</strong><span>Learning</span></div></div></div>
+                <div class="about-photo reveal"><img src="images/academy.jpg" alt="Warm, bright salon interior with mirrors and styling chairs" loading="lazy"></div>
+            </div>
+        </section>
+
+        <section class="section team-section" id="team">
+            <div class="container">
+                <div class="center-heading reveal"><p class="eyebrow">Beauty &amp; Learning</p><h2>Makeover &amp; Academy</h2><p>Discuss your beauty goals, event styling, or academy-related enquiries directly with the team.</p></div>
+                <div class="team-grid">
+                    <article class="team-card reveal"><img class="team-photo" src="images/10.jpg" alt="Beauty professional preparing a bridal makeup look" loading="lazy"><h3>Bridal Makeup</h3><div class="team-role">Bridal &amp; Party Looks</div><div class="team-social">Makeup Services</div><p>Explore makeup options for weddings, celebrations, parties, and other special occasions. Enquire about your preferred look.</p></article>
+                    <article class="team-card reveal"><img class="team-photo" src="images/8.jpg" alt="Hair styling inspiration" loading="lazy"><h3>Hair Styling</h3><div class="team-role">Style &amp; Treatments</div><div class="team-social">Hair Services</div><p>Ask about professional styling, trendy haircuts, keratin treatments, and hair spa options suited to your hair-care needs.</p></article>
+                    <article class="team-card reveal"><img class="team-photo" src="images/nailshair.jpg" alt="Beauty and self-care inspiration" loading="lazy"><h3>Skin &amp; Nail Care</h3><div class="team-role">Everyday Beauty</div><div class="team-social">Beauty Services</div><p>Discover facial and skin-care services, waxing, threading, manicures, and pedicures in one convenient beauty destination.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="testimonials">
+            <div class="container">
+                <div class="center-heading reveal"><p class="eyebrow">Kind Words</p><h2>Beauty for Your Special Moments</h2></div>
+                <div class="testimonials-grid">
+                    <article class="testimonial reveal"><div class="stars" aria-label="Beauty service highlight"><i class="fa-solid fa-sparkles" aria-hidden="true"></i> BEAUTY NOTES</div><blockquote>“A thoughtful beauty experience starts with listening, understanding your preferences, and helping you choose a look for your occasion.”</blockquote><div class="reviewer"><img src="images/nailshair.jpg" alt="" loading="lazy"><div><strong>Beauty Inspiration</strong><span>Makeup &amp; styling</span></div></div></article>
+                    <article class="testimonial reveal"><div class="stars" aria-label="Beauty service highlight"><i class="fa-solid fa-sparkles" aria-hidden="true"></i> BEAUTY NOTES</div><blockquote>“From event makeup to hair styling, the right details can help bring your personal style together for a special day.”</blockquote><div class="reviewer"><img src="images/3.jpg" alt="" loading="lazy"><div><strong>Event Styling</strong><span>Hair &amp; beauty</span></div></div></article>
+                    <article class="testimonial reveal"><div class="stars" aria-label="Beauty service highlight"><i class="fa-solid fa-sparkles" aria-hidden="true"></i> BEAUTY NOTES</div><blockquote>“Planning your bridal or party look is easier when you can discuss your ideas, preferred style, and service needs in advance.”</blockquote><div class="reviewer"><img src="images/2.jpg" alt="" loading="lazy"><div><strong>Bridal Beauty</strong><span>Special occasions</span></div></div></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section booking" id="booking">
+            <div class="container booking-grid">
+                <div class="booking-copy reveal">
+                    <p class="eyebrow">Get in Touch</p><h2>Your Makeover Starts Here.</h2><p>Planning bridal makeup, party styling, hair services, skin care, or nail care? Share your preferred service and date in this demo enquiry form, or call the salon directly. Form submissions are not sent or saved.</p>
+                    <div class="contact-list"><a href="tel:+919770311617"><i class="fa-solid fa-phone" aria-hidden="true"></i>+91 97703 11617</a><span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>S-8, Narela Shankari Rd, near Apurva Enclave, Ayodhya Nagar, Bhopal, MP 462041</span><span><i class="fa-regular fa-clock" aria-hidden="true"></i>Monday–Sunday · 9:00 AM–9:00 PM</span><span><i class="fa-solid fa-star" aria-hidden="true"></i>4.8/5 listed customer rating</span></div>
+                </div>
+                <form class="booking-form reveal" id="bookingForm" novalidate>
+                    <div class="form-grid">
+                        <div class="field"><label for="fullName">Full Name *</label><input id="fullName" name="fullName" autocomplete="name" placeholder="Your full name" required minlength="2"></div>
+                        <div class="field"><label for="email">Email Address *</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+                        <div class="field"><label for="service">Service *</label><select id="service" name="service" required><option value="">Choose a service</option><option>Bridal Makeup</option><option>Party Makeup</option><option>Hair Services</option><option>Keratin / Hair Spa</option><option>Skin Care / Facial</option><option>Nails / Manicure / Pedicure</option><option>Waxing / Threading</option><option>Academy Enquiry</option></select></div>
+                        <div class="field"><label for="preferredDate">Preferred Date *</label><input id="preferredDate" name="preferredDate" type="date" required></div>
+                        <div class="field full"><label for="message">Message (optional)</label><textarea id="message" name="message" placeholder="Tell us a little about your hair goals..."></textarea></div>
+                    </div>
+                    <p class="form-error" id="formError" role="alert" aria-live="polite"></p>
+                    <button class="btn" type="submit">Request Appointment <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                    <p class="form-note">Demo only — no information is sent or saved.</p>
+                    <div class="demo-message" id="demoMessage" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a class="wordmark" href="#home">SIYA’S MAKEOVER</a><p>Beauty parlour &amp; academy in Ayodhya Nagar, Bhopal.</p><div class="social-links"><a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a><a href="https://www.pinterest.com/" aria-label="Pinterest" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a></div></div>
+                <div class="footer-col"><h3>Services</h3><ul><li><a href="#services">Bridal Makeup</a></li><li><a href="#services">Party Makeup</a></li><li><a href="#services">Hair Styling</a></li><li><a href="#services">Skin Care</a></li><li><a href="#services">Nail Services</a></li><li><a href="#services">Academy</a></li></ul></div>
+                <div class="footer-col"><h3>Studio</h3><ul><li><a href="#about">About</a></li><li><a href="#team">Our Team</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#booking">Gift Cards</a></li><li><a href="#booking">Careers</a></li></ul></div>
+                <div class="footer-col"><h3>Visit</h3><p>S-8, Narela Shankari Rd,<br>near Apurva Enclave, Ayodhya Nagar,<br>Bhopal, Madhya Pradesh 462041</p><p>Monday–Sunday<br>9:00 AM–9:00 PM</p><p><a href="tel:+919770311617">+91 97703 11617</a></p></div>
+            </div>
+            <div class="footer-bottom"><span>© <span id="year">2026</span> Siya’s Makeover. All rights reserved.</span><div><a href="#booking">Privacy Policy</a><a href="#booking">Terms</a></div></div>
         </div>
-      </div>
-    </section>
+    </footer>
+    <!-- Floating WhatsApp Contact Button -->
+    <a href="https://wa.me/919770311617?text=Hello%20Siya%27s%20Makeover%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."
+       class="whatsapp-float"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Contact Siya's Makeover on WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M20.52 3.48A11.8 11.8 0 0 0 12.13 0C5.6 0 .29 5.31.29 11.84c0 2.09.55 4.13 1.6 5.93L.2 24l6.38-1.67a11.8 11.8 0 0 0 5.55 1.38h.01c6.53 0 11.84-5.31 11.84-11.84a11.8 11.8 0 0 0-3.46-8.39ZM12.13 21.7a9.84 9.84 0 0 1-5.02-1.37l-.36-.21-3.79.99 1.01-3.69-.23-.38a9.82 9.82 0 1 1 8.39 4.66Zm5.39-7.36c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.79-1.68-2.09-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.25-.6-.5-.52-.68-.53h-.58c-.2 0-.53.08-.8.38-.28.3-1.06 1.03-1.06 2.52s1.09 2.92 1.24 3.12c.15.2 2.14 3.27 5.18 4.58.72.31 1.28.5 1.72.64.72.23 1.37.2 1.88.12.58-.09 1.78-.73 2.03-1.44.25-.72.25-1.33.18-1.45-.08-.13-.28-.2-.58-.35Z" />
+        </svg>
+        <span>Chat on WhatsApp</span>
+    </a>
+    <script>
+            (() => {
+              const header = document.getElementById('siteHeader');
+              const menuToggle = document.getElementById('menuToggle');
+              const nav = document.getElementById('primaryNav');
+              const menuIcon = menuToggle.querySelector('i');
 
-    <section class="section transformation" id="transformation">
-      <div class="container">
-        <div class="center-heading reveal"><p class="eyebrow">A Little Beauty, A Lot of Confidence</p><h2>The Makeover Moment</h2><p>Explore a beauty transformation and imagine the look you would love for your next special occasion.</p></div>
-        <div class="comparison-layout reveal">
-          <div class="comparison" id="comparison" style="--split:50%" role="group" aria-label="Before and after hair colour comparison">
-            <img src="https://images.unsplash.com/photo-1512316609839-ce289d3eba0a?auto=format&fit=crop&w=1400&q=85" alt="Before: natural hair before a makeover" loading="lazy">
-            <img class="after-image" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=85" alt="After: styled hair for a beauty makeover" loading="lazy">
-            <span class="comparison-label before">Before</span><span class="comparison-label after">After</span>
-            <div class="comparison-line" aria-hidden="true"></div><div class="comparison-handle" aria-hidden="true"><i class="fa-solid fa-left-right"></i></div>
-            <input class="comparison-range" id="comparisonRange" type="range" min="5" max="95" value="50" aria-label="Reveal more of the after image" aria-valuetext="50 percent after image visible">
-          </div>
-          <div class="comparison-caption"><p class="eyebrow">Your Look, Your Way</p><h3>Feel ready for your moment.</h3><p>From bridal and party makeup to professional hair styling, our team helps you plan a look that suits your occasion.</p><p><strong class="serif" style="color:var(--foreground)">Bridal &amp; event beauty</strong><br>Contact us to discuss your preferred look and service requirements.</p><a class="text-link" href="#booking" data-service="Bridal Makeup">Enquire About a Makeover <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
-        </div>
-      </div>
-    </section>
+              const updateHeader = () => header.classList.toggle('scrolled', window.scrollY > 60);
+              updateHeader();
+              window.addEventListener('scroll', updateHeader, { passive: true });
 
-    <section class="portfolio" id="portfolio">
-      <div class="container portfolio-label reveal"><p class="eyebrow">Beauty Portfolio</p><h2>Looks for Every Occasion.</h2></div>
-      <div class="portfolio-track" aria-label="Hair styling portfolio gallery">
-        <div class="portfolio-strip">
-          <div class="portfolio-item"><img src="images/1.jpg" alt="Soft, dimensional blonde styling" loading="lazy"></div>
-          <div class="portfolio-item"><img src="images/2.jpg" alt="Glossy brunette editorial look" loading="lazy"></div>
-          <div class="portfolio-item"><img src="images/3.jpg" alt="Natural waves and luminous finish" loading="lazy"></div>
-          <div class="portfolio-item"><img src="images/4.jpg" alt="Fashion-led salon styling inspiration" loading="lazy"></div>
-          <div class="portfolio-item"><img src="images/5.jpg" alt="Rich brunette hair with soft dimension" loading="lazy"></div>
-          <div class="portfolio-item"><img src="images/6.jpg" alt="Modern editorial beauty look" loading="lazy"></div>
-          <div class="portfolio-item"><img src="images/7.jpg" alt="Warm auburn-inspired styling" loading="lazy"></div>
-          <div class="portfolio-item"><img src="images/8.jpg" alt="Soft blonde hair and natural movement" loading="lazy"></div>
-        </div>
-        <div class="portfolio-strip" aria-hidden="true">
-            <!--<div class="portfolio-item"><img src="images/9.jpg" alt="" loading="lazy"></div>-->
-            <div class="portfolio-item"><img src="images/10.jpg" alt="" loading="lazy"></div>
-            <div class="portfolio-item"><img src="images/11.jpg" alt="" loading="lazy"></div>
-            <div class="portfolio-item"><img src="images/12.jpg" alt="" loading="lazy"></div>
-            <div class="portfolio-item"><img src="images/13.jpg" alt="" loading="lazy"></div>
-            <div class="portfolio-item"><img src="images/14.jpg" alt="" loading="lazy"></div>
-            <div class="portfolio-item"><img src="images/15.jpg" alt="" loading="lazy"></div>
-            <div class="portfolio-item"><img src="images/16.jpg" alt="" loading="lazy"></div>
-            <div class="portfolio-item"><img src="images/17.jpg" alt="" loading="lazy"></div>
-        </div>
-      </div>
-      <p class="portfolio-caption">Beauty looks and inspiration for your next special occasion</p>
-    </section>
+              menuToggle.addEventListener('click', () => {
+                const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', String(!isOpen));
+                menuToggle.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+                nav.classList.toggle('open', !isOpen);
+                header.classList.toggle('menu-open', !isOpen);
+                menuIcon.className = isOpen ? 'fa-solid fa-bars' : 'fa-solid fa-xmark';
+              });
+              nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                header.classList.remove('menu-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Open navigation menu');
+                menuIcon.className = 'fa-solid fa-bars';
+              }));
 
-    <section class="section" id="about">
-      <div class="container about-grid">
-        <div class="about-copy reveal"><p class="eyebrow">About Siya’s Makeover</p><h2>Your Beauty &amp; Learning Destination</h2><p>Siya’s Makeover is a beauty parlour and academy in Ayodhya Nagar, Bhopal, offering services for bridal occasions, parties, hair styling, skin care, and nail care.</p><p>Whether you are preparing for a special event or looking to enjoy a little self-care, get in touch to discuss the service that suits your needs. The academy side of the business also makes Siya’s Makeover a destination for beauty-focused learning.</p><blockquote class="pullquote">“Every look should feel personal, every detail thoughtfully considered.”</blockquote><div class="stats"><div class="stat"><strong>4.8/5</strong><span>Listed Rating</span></div><div class="stat"><strong>Beauty</strong><span>Parlour</span></div><div class="stat"><strong>Academy</strong><span>Learning</span></div></div></div>
-        <div class="about-photo reveal"><img src="images/academy.jpg" alt="Warm, bright salon interior with mirrors and styling chairs" loading="lazy"></div>
-      </div>
-    </section>
+              // Respect reduced-motion preferences and reveal sections as they enter view.
+              const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+              const revealItems = document.querySelectorAll('.reveal');
+              if ('IntersectionObserver' in window && !reduceMotion) {
+                const observer = new IntersectionObserver(entries => {
+                  entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                      entry.target.classList.add('visible');
+                      observer.unobserve(entry.target);
+                    }
+                  });
+                }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
+                revealItems.forEach((item, index) => {
+                  item.style.transitionDelay = `${(index % 4) * 90}ms`;
+                  observer.observe(item);
+                });
+              } else {
+                revealItems.forEach(item => item.classList.add('visible'));
+              }
 
-    <section class="section team-section" id="team">
-      <div class="container"><div class="center-heading reveal"><p class="eyebrow">Beauty &amp; Learning</p><h2>Makeover &amp; Academy</h2><p>Discuss your beauty goals, event styling, or academy-related enquiries directly with the team.</p></div>
-        <div class="team-grid">
-          <article class="team-card reveal"><img class="team-photo" src="images/10.jpg" alt="Beauty professional preparing a bridal makeup look" loading="lazy"><h3>Bridal Makeup</h3><div class="team-role">Bridal &amp; Party Looks</div><div class="team-social">Makeup Services</div><p>Explore makeup options for weddings, celebrations, parties, and other special occasions. Enquire about your preferred look.</p></article>
-          <article class="team-card reveal"><img class="team-photo" src="images/8.jpg" alt="Hair styling inspiration" loading="lazy"><h3>Hair Styling</h3><div class="team-role">Style &amp; Treatments</div><div class="team-social">Hair Services</div><p>Ask about professional styling, trendy haircuts, keratin treatments, and hair spa options suited to your hair-care needs.</p></article>
-          <article class="team-card reveal"><img class="team-photo" src="images/nailshair.jpg" alt="Beauty and self-care inspiration" loading="lazy"><h3>Skin &amp; Nail Care</h3><div class="team-role">Everyday Beauty</div><div class="team-social">Beauty Services</div><p>Discover facial and skin-care services, waxing, threading, manicures, and pedicures in one convenient beauty destination.</p></article>
-        </div>
-      </div>
-    </section>
+              // Accessible before/after slider: range input supports mouse, touch and keyboard.
+              const comparison = document.getElementById('comparison');
+              const range = document.getElementById('comparisonRange');
+              const updateComparison = () => {
+                comparison.style.setProperty('--split', `${range.value}%`);
+                range.setAttribute('aria-valuetext', `${range.value}% after image visible`);
+              };
+              range.addEventListener('input', updateComparison);
+              updateComparison();
 
-    <section class="section" id="testimonials">
-      <div class="container"><div class="center-heading reveal"><p class="eyebrow">Kind Words</p><h2>Beauty for Your Special Moments</h2></div>
-        <div class="testimonials-grid">
-          <article class="testimonial reveal"><div class="stars" aria-label="Beauty service highlight"><i class="fa-solid fa-sparkles" aria-hidden="true"></i> BEAUTY NOTES</div><blockquote>“A thoughtful beauty experience starts with listening, understanding your preferences, and helping you choose a look for your occasion.”</blockquote><div class="reviewer"><img src="images/nailshair.jpg" alt="" loading="lazy"><div><strong>Beauty Inspiration</strong><span>Makeup &amp; styling</span></div></div></article>
-          <article class="testimonial reveal"><div class="stars" aria-label="Beauty service highlight"><i class="fa-solid fa-sparkles" aria-hidden="true"></i> BEAUTY NOTES</div><blockquote>“From event makeup to hair styling, the right details can help bring your personal style together for a special day.”</blockquote><div class="reviewer"><img src="images/3.jpg" alt="" loading="lazy"><div><strong>Event Styling</strong><span>Hair &amp; beauty</span></div></div></article>
-          <article class="testimonial reveal"><div class="stars" aria-label="Beauty service highlight"><i class="fa-solid fa-sparkles" aria-hidden="true"></i> BEAUTY NOTES</div><blockquote>“Planning your bridal or party look is easier when you can discuss your ideas, preferred style, and service needs in advance.”</blockquote><div class="reviewer"><img src="images/2.jpg" alt="" loading="lazy"><div><strong>Bridal Beauty</strong><span>Special occasions</span></div></div></article>
-        </div>
-      </div>
-    </section>
+              // Service links preselect the relevant enquiry option.
+              const serviceSelect = document.getElementById('service');
+              document.querySelectorAll('[data-service]').forEach(link => {
+                link.addEventListener('click', () => {
+                  const desired = link.dataset.service;
+                  const option = Array.from(serviceSelect.options).find(item => item.text.toLowerCase() === desired.toLowerCase());
+                  if (option) serviceSelect.value = option.value;
+                });
+              });
 
-    <section class="section booking" id="booking">
-      <div class="container booking-grid">
-        <div class="booking-copy reveal"><p class="eyebrow">Get in Touch</p><h2>Your Makeover Starts Here.</h2><p>Planning bridal makeup, party styling, hair services, skin care, or nail care? Share your preferred service and date in this demo enquiry form, or call the salon directly. Form submissions are not sent or saved.</p>
-          <div class="contact-list"><a href="tel:+919770311617"><i class="fa-solid fa-phone" aria-hidden="true"></i>+91 97703 11617</a><span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>S-8, Narela Shankari Rd, near Apurva Enclave, Ayodhya Nagar, Bhopal, MP 462041</span><span><i class="fa-regular fa-clock" aria-hidden="true"></i>Monday–Sunday · 9:00 AM–9:00 PM</span><span><i class="fa-solid fa-star" aria-hidden="true"></i>4.8/5 listed customer rating</span></div>
-        </div>
-        <form class="booking-form reveal" id="bookingForm" novalidate>
-          <div class="form-grid">
-            <div class="field"><label for="fullName">Full Name *</label><input id="fullName" name="fullName" autocomplete="name" placeholder="Your full name" required minlength="2"></div>
-            <div class="field"><label for="email">Email Address *</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
-            <div class="field"><label for="service">Service *</label><select id="service" name="service" required><option value="">Choose a service</option><option>Bridal Makeup</option><option>Party Makeup</option><option>Hair Services</option><option>Keratin / Hair Spa</option><option>Skin Care / Facial</option><option>Nails / Manicure / Pedicure</option><option>Waxing / Threading</option><option>Academy Enquiry</option></select></div>
-            <div class="field"><label for="preferredDate">Preferred Date *</label><input id="preferredDate" name="preferredDate" type="date" required></div>
-            <div class="field full"><label for="message">Message (optional)</label><textarea id="message" name="message" placeholder="Tell us a little about your hair goals..."></textarea></div>
-          </div>
-          <p class="form-error" id="formError" role="alert" aria-live="polite"></p>
-          <button class="btn" type="submit">Request Appointment <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
-          <p class="form-note">Demo only — no information is sent or saved.</p>
-          <div class="demo-message" id="demoMessage" role="status" aria-live="polite"></div>
-        </form>
-      </div>
-    </section>
-  </main>
+              // Date must be today or later; form intentionally performs no network requests.
+              const dateInput = document.getElementById('preferredDate');
+              const today = new Date();
+              const localToday = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
+              dateInput.min = localToday;
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand"><a class="wordmark" href="#home">SIYA’S MAKEOVER</a><p>Beauty parlour &amp; academy in Ayodhya Nagar, Bhopal.</p><div class="social-links"><a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a><a href="https://www.pinterest.com/" aria-label="Pinterest" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a></div></div>
-        <div class="footer-col"><h3>Services</h3><ul><li><a href="#services">Bridal Makeup</a></li><li><a href="#services">Party Makeup</a></li><li><a href="#services">Hair Styling</a></li><li><a href="#services">Skin Care</a></li><li><a href="#services">Nail Services</a></li><li><a href="#services">Academy</a></li></ul></div>
-        <div class="footer-col"><h3>Studio</h3><ul><li><a href="#about">About</a></li><li><a href="#team">Our Team</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#booking">Gift Cards</a></li><li><a href="#booking">Careers</a></li></ul></div>
-        <div class="footer-col"><h3>Visit</h3><p>S-8, Narela Shankari Rd,<br>near Apurva Enclave, Ayodhya Nagar,<br>Bhopal, Madhya Pradesh 462041</p><p>Monday–Sunday<br>9:00 AM–9:00 PM</p><p><a href="tel:+919770311617">+91 97703 11617</a></p></div>
-      </div>
-      <div class="footer-bottom"><span>© <span id="year">2026</span> Siya’s Makeover. All rights reserved.</span><div><a href="#booking">Privacy Policy</a><a href="#booking">Terms</a></div></div>
-    </div>
-  </footer>
+              const form = document.getElementById('bookingForm');
+              const error = document.getElementById('formError');
+              const confirmation = document.getElementById('demoMessage');
+              form.addEventListener('input', () => {
+                error.textContent = '';
+                confirmation.classList.remove('show');
+                confirmation.textContent = '';
+              });
+              form.addEventListener('submit', event => {
+                event.preventDefault();
+                confirmation.classList.remove('show');
+                const name = document.getElementById('fullName');
+                const email = document.getElementById('email');
+                const service = serviceSelect;
+                const date = dateInput;
+                let invalid = null;
+                if (name.value.trim().length < 2) invalid = name;
+                else if (!email.validity.valid || !email.value.trim()) invalid = email;
+                else if (!service.value) invalid = service;
+                else if (!date.value || date.value < localToday) invalid = date;
 
-  <script>
-    (() => {
-      const header = document.getElementById('siteHeader');
-      const menuToggle = document.getElementById('menuToggle');
-      const nav = document.getElementById('primaryNav');
-      const menuIcon = menuToggle.querySelector('i');
+                if (invalid) {
+                  error.textContent = 'Please complete all required fields with valid details and choose today or a future date.';
+                  invalid.focus();
+                  return;
+                }
 
-      const updateHeader = () => header.classList.toggle('scrolled', window.scrollY > 60);
-      updateHeader();
-      window.addEventListener('scroll', updateHeader, { passive: true });
+                error.textContent = '';
+                confirmation.textContent = `Thank you, ${name.value.trim()}. Your demo appointment request for ${service.value} on ${date.value} has been validated locally. No details were sent or saved; this is not a confirmed booking.`;
+                confirmation.classList.add('show');
+                confirmation.focus?.({ preventScroll: true });
+              });
 
-      menuToggle.addEventListener('click', () => {
-        const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', String(!isOpen));
-        menuToggle.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
-        nav.classList.toggle('open', !isOpen);
-        header.classList.toggle('menu-open', !isOpen);
-        menuIcon.className = isOpen ? 'fa-solid fa-bars' : 'fa-solid fa-xmark';
-      });
-      nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        header.classList.remove('menu-open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.setAttribute('aria-label', 'Open navigation menu');
-        menuIcon.className = 'fa-solid fa-bars';
-      }));
-
-      // Respect reduced-motion preferences and reveal sections as they enter view.
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const revealItems = document.querySelectorAll('.reveal');
-      if ('IntersectionObserver' in window && !reduceMotion) {
-        const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
-        revealItems.forEach((item, index) => {
-          item.style.transitionDelay = `${(index % 4) * 90}ms`;
-          observer.observe(item);
-        });
-      } else {
-        revealItems.forEach(item => item.classList.add('visible'));
-      }
-
-      // Accessible before/after slider: range input supports mouse, touch and keyboard.
-      const comparison = document.getElementById('comparison');
-      const range = document.getElementById('comparisonRange');
-      const updateComparison = () => {
-        comparison.style.setProperty('--split', `${range.value}%`);
-        range.setAttribute('aria-valuetext', `${range.value}% after image visible`);
-      };
-      range.addEventListener('input', updateComparison);
-      updateComparison();
-
-      // Service links preselect the relevant enquiry option.
-      const serviceSelect = document.getElementById('service');
-      document.querySelectorAll('[data-service]').forEach(link => {
-        link.addEventListener('click', () => {
-          const desired = link.dataset.service;
-          const option = Array.from(serviceSelect.options).find(item => item.text.toLowerCase() === desired.toLowerCase());
-          if (option) serviceSelect.value = option.value;
-        });
-      });
-
-      // Date must be today or later; form intentionally performs no network requests.
-      const dateInput = document.getElementById('preferredDate');
-      const today = new Date();
-      const localToday = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
-      dateInput.min = localToday;
-
-      const form = document.getElementById('bookingForm');
-      const error = document.getElementById('formError');
-      const confirmation = document.getElementById('demoMessage');
-      form.addEventListener('input', () => {
-        error.textContent = '';
-        confirmation.classList.remove('show');
-        confirmation.textContent = '';
-      });
-      form.addEventListener('submit', event => {
-        event.preventDefault();
-        confirmation.classList.remove('show');
-        const name = document.getElementById('fullName');
-        const email = document.getElementById('email');
-        const service = serviceSelect;
-        const date = dateInput;
-        let invalid = null;
-        if (name.value.trim().length < 2) invalid = name;
-        else if (!email.validity.valid || !email.value.trim()) invalid = email;
-        else if (!service.value) invalid = service;
-        else if (!date.value || date.value < localToday) invalid = date;
-
-        if (invalid) {
-          error.textContent = 'Please complete all required fields with valid details and choose today or a future date.';
-          invalid.focus();
-          return;
-        }
-
-        error.textContent = '';
-        confirmation.textContent = `Thank you, ${name.value.trim()}. Your demo appointment request for ${service.value} on ${date.value} has been validated locally. No details were sent or saved; this is not a confirmed booking.`;
-        confirmation.classList.add('show');
-        confirmation.focus?.({ preventScroll: true });
-      });
-
-      document.getElementById('year').textContent = new Date().getFullYear();
-    })();
-  </script>
+              document.getElementById('year').textContent = new Date().getFullYear();
+            })();
+    </script>
 </body>
 </html>
